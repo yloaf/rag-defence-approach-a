@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-screen-experiment"
+version = "0.1.0"
+description = "Local experiments on selective removal of prompt injections from retrieved evidence"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2,<3", "scikit-learn>=1.5,<2", "tokenizers>=0.20,<1", "pyarrow>=17,<30"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+rag-screen = "rag_screen.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["rag_screen*", "rag_study*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

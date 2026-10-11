@@ -1,0 +1,5 @@
+numpy>=2.0,<3
+scikit-learn>=1.5,<2
+tokenizers>=0.20,<1
+pytest>=8,<10
+pyarrow>=17,<30
